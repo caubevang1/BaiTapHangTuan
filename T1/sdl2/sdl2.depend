@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1708676911 source:d:\codeblok\sdl2\main.cpp
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1708365802 source:d:\codeblok\sdl2\untitled1.cpp
+	<iostream>
+	<SDL.h>
+
