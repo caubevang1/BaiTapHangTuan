@@ -32,6 +32,7 @@ void banner(string s) {
         { "#####", "   # ", "  #  ", " #   ", "#####" }  // Z
     };
 
+    for (int i = 0; i < 5; ++i) {
         for (int j = 0; j < word.length(); ++j) {
             if (word[j] >= 'a' && word[j] <= 'z')
                 cout << letters[word[j] - 'a'][i] << "  ";
@@ -41,6 +42,7 @@ void banner(string s) {
                 cout << "        ";
         }
         cout << endl;
+    }
 }
 
 int main() {
