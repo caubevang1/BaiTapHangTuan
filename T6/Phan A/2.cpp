@@ -1,11 +1,22 @@
-#include <iostream>
+#include<bits/stdc++.h>
+
 using namespace std;
 
-void f(int *a){
-	cout << sizeof(a) << endl;
+long factorial(int x)
+{   
+    cout << "x = " << x << " at " << &x << endl;
+    if(x==1) return x;
+    return x*factorial(x-1);
 }
-int main(){
-	int a[5];
-	cout << sizeof(a) << endl; //20
-	f(a); //8
+
+int main()
+{
+    int x = 5;
+    cout << factorial(x);
 }
+/*
+x = 5 at 0x6ffdf0
+x = 4 at 0x6ffdb0
+x = 3 at 0x6ffd70
+x = 2 at 0x6ffd30
+x = 1 at 0x6ffcf0 */

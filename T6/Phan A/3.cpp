@@ -1,22 +1,27 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-int count_even(int* a, int n)
+void ThamTri(int a, int b)
 {
-    int count = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if(!(*(a + i)%2)) count++;
-    }
-    return count; 
+    cout << "Tham Tri:      " << &a << " " << &b << endl;
+}
+
+void ThamChieu(int &a, int &b)
+{
+    cout << "Tham Chieu: " << &a << " " << &b << endl;
 }
 
 int main()
 {
-    int a[] = {1,2,3,4,5,6,7,8,9,10};
-    int n = sizeof(a)/sizeof(a[0]);
-
-    cout << count_even(a,n-5) << endl;
-    cout << count_even(a+n-5, n-5) << endl;
-
+    int a = 3;
+    int b = 2;
+    cout << "&a = " << &a << " " << "&b = " << &b << endl;
+    ThamTri(a,b);
+    ThamChieu(a,b);
 }
+
+/*
+    &a = 0x6ffe1c &b = 0x6ffe18
+    Tham Tri:   0x6ffdf0 0x6ffdf8
+    Tham Chieu: 0x6ffe1c 0x6ffe18
+*/

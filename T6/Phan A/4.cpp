@@ -1,30 +1,37 @@
 #include<bits/stdc++.h>
+
 using namespace std;
 
-int binSearch(int* a, int n, int target)
+void mod(int arr[])
 {
-    int* l = a;
-    int* r = a+n;
-
-    while (l<r)
-    {
-        int* m = l+(r-l)/2;
-        if(*m == target) return m - a;
-        else if (*m < target)
-        {
-            l = m+1;
-        } else
-        {
-            r = m-1;
-        }
-    }
-    return -1;
+    arr[0] = 4;
+}
+void modStr(string s)
+{
+    s = "def";
 }
 
-int main()
-{
-    int a[] = {1,2,3,4,5};
-    int n = sizeof(a)/sizeof(a[0]);
+int main(){
+    int arr[3] = {1,2,3};
+    for(int i = 0; i < 3; i++) cout << arr[i] << " ";
+    cout << endl;
+    mod(arr);
+    for(int i = 0; i < 3; i++) cout << arr[i] << " ";
+    /*
+    Output:
+        1 2 3 
+        4 2 3
+    Truyen bang tham chieu
+    */
+   cout << endl;
 
-    cout << binSearch(a,n,1);
+   string s = "abc";
+   cout << endl;
+   modStr(s);
+   cout << s << endl;
+   /*   
+        Output: abc
+        Truyen bang tham tri
+   */
+
 }
